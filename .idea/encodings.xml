@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/com/config/AlipayConfig.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/config/JedisConfig.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/controller/AdminIndexController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/controller/IndexController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/controller/PayController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/controller/ProdListController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/filter/BackendFilter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/filter/BeforeFilter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/interceptor/BackendInterceptor.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/interceptor/BeforeInterceptor.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/listener/MyHttpSessionListener.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/service/AdminOrderServiceImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/service/AdminServiceImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/service/UserServiceImpl.java" charset="GBK" />
+    <file url="PROJECT" charset="GBK" />
+  </component>
+</project>
