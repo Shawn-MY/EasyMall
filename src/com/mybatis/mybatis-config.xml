@@ -5,7 +5,13 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <configuration>
 	 <mappers>
         <mapper resource="com/mybatis/UserMapper.xml"/>
-
+         <mapper resource="com/mybatis/CartMapper.xml"/>
+         <mapper resource="com/mybatis/AdminMapper.xml"/>
+         <mapper resource="com/mybatis/AdminGoodsMapper.xml"/>
+         <mapper resource="com/mybatis/AdminOrderMapper.xml"/>
+         <mapper resource="com/mybatis/ProdListMapper.xml"/>
+         <mapper resource="com/mybatis/OrderMapper.xml"/>
+         <mapper resource="com/mybatis/OrderAddMapper.xml"/>
  	</mappers>
 
 </configuration>
