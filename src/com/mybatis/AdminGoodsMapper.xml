@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.AdminGoodsDao">
+	<!-- 分页查询 -->
+	<select id="selectAllGoodsByPage"  resultType="Product" parameterType="map">
+		select * from products order by id limit #{startIndex}, #{perPageSize}
+	</select>
+	<!-- 查询商品 -->
+	<select id="selectGoods"  resultType="Product">
+		select * from products
+	</select>
+	<insert id="addProd" parameterType="Product">
+		insert into products (id, name, price, category, pnum, imgurl, description) values (#{id}, #{name}, #{price}, #{category}, #{pnum}, #{imgurl}, #{description})
+	</insert>
+	<select id="selectProdByName"  resultType="Product">
+		select * from products where name = #{name}
+	</select>
+	<select id="selectProdById"  resultType="Product">
+		select * from products where id = #{id}
+	</select>
+
+	<delete id="deleteAProd" parameterType="String">
+		delete from products where id=#{id}
+	</delete>
+	<update id="updateProdById" parameterType="Product">
+		update products
+		<set>
+			<if test="id!=null">
+				id=#{id},
+			</if>
+			<if test="price!=null">
+				price=#{price},
+			</if>
+			<if test="name!=null">
+				name=#{name},
+			</if>
+			<if test="pnum!=null">
+				pnum=#{pnum},
+			</if>
+			<if test="category!=null">
+				category=#{category},
+			</if>
+			<if test="imgurl!=null">
+				imgurl=#{imgurl},
+			</if>
+			<if test="description!=null">
+				description=#{description},
+			</if>
+		</set>
+		where id=#{id}
+	</update>
+</mapper>
