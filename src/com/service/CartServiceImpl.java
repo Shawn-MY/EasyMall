@@ -49,7 +49,6 @@ public class CartServiceImpl implements CartService {
 	}
 
 	public void update(HttpServletRequest req, HttpServletResponse res) {
-		// TODO Auto-generated method stub
 		String pid = req.getParameter("pid");
 		int buyNum = Integer.parseInt(req.getParameter("buyNum"));
 		Map<Product, Integer> map = null;

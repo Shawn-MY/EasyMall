@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.ProdListDao">
+	<select id="getProdList" resultType="map">
+		select * from products
+	</select>
+	<select id="selectProdById"  resultType="Prod" parameterType="String">
+		select * from products where id=#{id}
+	</select>
+	<select id="selectProdById2"  resultType="map" parameterType="String">
+		select * from products where id=#{id}
+	</select>
+	<select id="searchProdByName"  resultType="map" parameterType="String">
+		select * from products where 1 = 1 
+		<if test="name!=''">
+			and name like '%${name}%' 
+		</if>
+	</select>
+	<select id="searchProd"  resultType="map" parameterType="SearchProd">
+		select * from products where 1 = 1 
+		<if test="name!=''">
+			and name like '%${name}%' 
+		</if>
+		<if test="category!=''">
+			and category like '%${category}%' 
+		</if>
+		<if test="minPrice&gt;-1">
+			and price &gt;=#{minPrice} 
+		</if>
+		<if test="maxPrice&gt;-1">
+			and price &lt;=#{maxPrice}
+		</if>
+	</select>
+	
+</mapper>
